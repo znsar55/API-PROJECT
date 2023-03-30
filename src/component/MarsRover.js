@@ -104,6 +104,7 @@ let date
       <p>Launch Date:{launch_date}</p>
       <p>Status:{status}</p>
        
+       
       </div>
       </div>
       </div>
