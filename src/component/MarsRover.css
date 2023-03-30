@@ -1,0 +1,68 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 750px;
+}
+.btn1,.btn2{
+    width: 80px;
+    height: 30px;
+    display:table-column;
+    margin: 5px;
+}
+.btn2{
+    margin-top: -35px;
+    margin-left: 150px;
+}
+
+.Card{
+    
+    display: grid;
+    grid-template-columns: (auto-fit,minmax(550px,1fr));
+    flex-direction:row;
+    
+  }
+  
+  .ImgBox{
+    position:relative;
+  overflow: hidden;  
+  }
+  .ImgBox > img {
+    display: block;
+    width:700px;
+    height: 700px;
+    aspect-ratio: 1/1;
+    object-fit:cover;
+  }
+  
+  .ImgBox > .Content{
+    position:absolute;
+    color: yellow;
+    inset:0;
+    padding: 2rem;
+    background: rgba(255,255, 255, .4);
+    display:block;
+    justify-content: center;
+    align-items: center;
+    width:700px;
+    height: 700px;
+  }
+  .ImgBox >img ,
+  .ImgBox >.Content{
+    transition: 200ms ease-in-out;
+  }
+.ImgBox:hover >img .blur{
+filter: blur(15px);
+}
+.ImgBox:hover >img .zoom{
+  transform: scale(5.5);
+  }
+
+  .ImgBox >.Content.fade{
+    opacity: 0;
+  }
+  .ImgBox:hover > .Content.fade{
+    opacity: 1;
+  }
+  

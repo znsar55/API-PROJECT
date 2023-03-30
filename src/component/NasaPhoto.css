@@ -1,0 +1,55 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 750px;
+}
+.NasaPhotoCard{
+    
+    display: grid;
+    grid-template-columns: (auto-fit,minmax(550px,1fr));
+    flex-direction:row;
+    
+  }
+  
+  .NasaImgBox{
+    position:relative;
+  overflow: hidden;  
+  }
+  .NasaImgBox > img {
+    display: block;
+    width:700px;
+    aspect-ratio: 1/1;
+    object-fit:cover;
+  }
+  
+  .NasaImgBox > .NasaContent{
+    position:absolute;
+    color:yellow;
+    inset:0;
+    padding: 1rem;
+    background: rgba(255,255, 255, .4);
+    display:block;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .NasaImgBox >img ,
+  .NasaImgBox >.NasaContent{
+    transition: 200ms ease-in-out;
+  }
+.NasaImgBox:hover >img .blur{
+filter: blur(15px);
+}
+.NasaImgBox:hover >img .zoom{
+  transform: scale(5.5);
+  }
+
+  .NasaImgBox >.NasaContent.fade{
+    opacity: 0;
+  }
+  .NasaImgBox:hover > .NasaContent.fade{
+    opacity: 1;
+  }
+  
