@@ -20,11 +20,21 @@ const NasaPhoto = () => {
   useEffect(
     () => { handler(); }, [numDate]
   )
+  let img
+  let img_text=' There is no image of the Day'
+  
+  if  (!img){
+    img=<p>{img_text}</p>
+  }
+
   let date
   if(new Date(numDate)>new Date()){
-    date=
-    <p>you Cannot pick Future Date</p>
+
+    date= <p>{nasa.msg} </p>
+  }else{
+   img =<img className="blur zoom" src={nasa.url} />
   }
+
   return (
     <div>
       <input type="date" onChange={(e) => setNumDate(e.target.value)}  ></input>
@@ -35,7 +45,7 @@ const NasaPhoto = () => {
         <h2>Nasa Image of the Day</h2>
 
         <div className="NasaImgBox">
-          <img className="blur zoom" src={nasa.url} />
+          {img}
         
         <div className="NasaContent fade">
           {date?date:<div>

@@ -70,7 +70,7 @@ let loncoordinat=<p>no data</p>
 let date
   if(new Date(numDate)>new Date()){
     date=
-    <p>you Cannot pick Future Date</p>
+    <p>you cannot see future </p>
   }
 
 
@@ -78,7 +78,7 @@ let date
     <div>
       <input type="date" onChange={(e)=>setNumDate ( e.target.value)}  ></input>
       <div className="Card">
-      <h2>Earth Pisition of the Day</h2>
+      <h2>Earth Position of the Day</h2>
       <div className="ImgBox">
             {img}
             <div className="Content fade">

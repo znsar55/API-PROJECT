@@ -26,7 +26,8 @@
   
   .NasaImgBox > .NasaContent{
     position:absolute;
-    color:yellow;
+border: 5px ;
+    color:#D6EAF8;
     inset:0;
     padding: 1rem;
     background: rgba(255,255, 255, .4);

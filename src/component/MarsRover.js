@@ -9,8 +9,8 @@ const MarsRover=()=>{
   let key = process.env.REACT_APP_NASA_KEY
  const max =(newIndex)=>{
   
-  if ( newIndex >= 9){
-    newIndex=9
+  if ( newIndex >= 15){
+    newIndex=0
   }else if(newIndex < 0){
     newIndex = 0
   }
@@ -28,7 +28,7 @@ const MarsRover=()=>{
       if(!data.photos){
         setMars([])
       }else{
-        setMars(data.photos.slice(0,9));
+        setMars(data.photos.slice(0,15));
       }
       console.log(data)
             
@@ -36,6 +36,7 @@ const MarsRover=()=>{
       console.log(data.photos[index].camera.name)
       console.log(data.photos[index].rover.name)
       console.log(data.photos[index].earth_date)
+      console.log([index])
       //console.log(data.photos)
       
 
@@ -75,9 +76,9 @@ status=mars[index].rover.status
 
 let date
   if(new Date(numDate)>new Date()){
-    img_Text+='you cannot pick Future Date'
+    img_Text+='  you cannot see future'
     date=<div ><p>
-    <p>you Cannot pick Future Date</p>
+    <p>you cannot see future</p>
   </p><br></br></div>
   }
    if(!img){
@@ -88,14 +89,14 @@ let date
     <div >
       <input type="date" onChange={(e)=>setNumDate ( e.target.value)}  ></input>
       <div className='Card'>  
-      <h2>Image of the Day</h2>
+      <h2>Rover Image</h2>
       
       <button className='btn1' onClick={()=>max(index+1)}>Next</button>
-      <button className='btn2' onClick={()=>max(index-1)}>Back</button>
+      <button className='btn2' onClick={()=>max(index-1)}>previous</button>
       <div className='ImgBox'>
       {img}
       <div className='Content fade'>
-      
+      {date?date:<div>
       <label><h4>Camera Details:{camera}</h4></label>
       <h4>Rover Details:{rover}</h4>
       <p>Earth Date:{date1}</p>
@@ -103,8 +104,8 @@ let date
       <p>landing Date:{landing_date}</p>
       <p>Launch Date:{launch_date}</p>
       <p>Status:{status}</p>
-       
-       
+     </div>}  
+      
       </div>
       </div>
       </div>

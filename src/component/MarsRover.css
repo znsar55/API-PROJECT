@@ -38,7 +38,7 @@
   
   .ImgBox > .Content{
     position:absolute;
-    color: yellow;
+    color: #D4E6F1;
     inset:0;
     padding: 2rem;
     background: rgba(255,255, 255, .4);
