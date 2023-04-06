@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/API-PROJECT/static/css/main.1f7fab40.css",
-    "main.js": "/API-PROJECT/static/js/main.294d63fa.js",
+    "main.css": "/API-PROJECT/static/css/main.6e490415.css",
+    "main.js": "/API-PROJECT/static/js/main.d6574968.js",
     "static/js/787.50d66026.chunk.js": "/API-PROJECT/static/js/787.50d66026.chunk.js",
-    "static/media/Nasa.jpg": "/API-PROJECT/static/media/Nasa.136a5bc7360a7634a0e4.jpg",
     "index.html": "/API-PROJECT/index.html",
-    "main.1f7fab40.css.map": "/API-PROJECT/static/css/main.1f7fab40.css.map",
-    "main.294d63fa.js.map": "/API-PROJECT/static/js/main.294d63fa.js.map",
+    "main.6e490415.css.map": "/API-PROJECT/static/css/main.6e490415.css.map",
+    "main.d6574968.js.map": "/API-PROJECT/static/js/main.d6574968.js.map",
     "787.50d66026.chunk.js.map": "/API-PROJECT/static/js/787.50d66026.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f7fab40.css",
-    "static/js/main.294d63fa.js"
+    "static/css/main.6e490415.css",
+    "static/js/main.d6574968.js"
   ]
 }
